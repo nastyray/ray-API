@@ -20,6 +20,7 @@ import React, { useState } from 'react';
 import { flushSync } from 'react-dom';
 import styles from './index.less';
 import { userLoginUsingPOST } from '@/services/yuapi-backend/userController';
+import * as url from "url";
 
 const LoginMessage: React.FC<{
   content: string;
@@ -47,10 +48,16 @@ const Login: React.FC = () => {
       });
       if (res.data) {
         const urlParams = new URL(window.location.href).searchParams;
-        history.push(urlParams.get('redirect') || '/');
+        //设置一个延时100ms的定时器
+        //定时器触发后，导航重定向URL，如果没有重定向URL，则导航到根路径
+        setTimeout(() => {
+          history.push(urlParams.get('redirect') || '/');
+        },100);
+        //更新全局状态，设置用户的信息
         setInitialState({
           loginUser: res.data
         });
+
         return;
       }
     } catch (error) {
