@@ -5,11 +5,17 @@ import com.ray.rayapiinterface.model.User;
 
 public class Main {
     public static void main(String[] args) {
-        ApiClient yuApiClient = new ApiClient();
+
+        String accessKey = "yupi";
+
+        String secretKey = "abcdefgh";
+
+        ApiClient yuApiClient = new ApiClient(accessKey,secretKey);
+
         String result1 = yuApiClient.getNameByGet("鱼皮");
         String result2 = yuApiClient.getNameByPost("鱼皮");
         User user = new User();
-        user.setName("鲤鱼旗");
+        user.setUsername("liyupi");
         String result3 = yuApiClient.getUsernameByPost(user);
         System.out.println(result1);
         System.out.println(result2);
