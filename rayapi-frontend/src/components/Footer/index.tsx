@@ -13,20 +13,20 @@ const Footer: React.FC = () => {
       links={[
         {
           key: '鱼皮接口',
-          title: '鱼皮接口',
+          title: '小ray接口',
           href: 'https://pro.ant.design',
           blankTarget: true,
         },
         {
           key: 'github',
           title: <GithubOutlined />,
-          href: 'https://github.com/ant-design/ant-design-pro',
+          href: 'https://github.com/nastyray',
           blankTarget: true,
         },
         {
           key: '鱼皮接口',
-          title: '鱼皮接口',
-          href: 'https://ant.design',
+          title: 'NastyRay',
+          href: 'https://github.com/nastyray',
           blankTarget: true,
         },
       ]}
