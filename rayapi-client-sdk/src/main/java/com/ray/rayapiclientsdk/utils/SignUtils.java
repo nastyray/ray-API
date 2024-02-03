@@ -1,9 +1,7 @@
-package com.ray.rayapiinterface.utils;
+package com.ray.rayapiclientsdk.utils;
 
 import cn.hutool.crypto.digest.DigestAlgorithm;
 import cn.hutool.crypto.digest.Digester;
-
-import java.util.Map;
 
 /**
  * ClassName: SignUtils
@@ -17,7 +15,7 @@ import java.util.Map;
 public class SignUtils {
     /**
      * 生成签名
-     * @param hashMap 包含需要签名的参数的哈希映射
+     * @param body  请求参数
      * @param secretKey 密钥
      * @return 生成的签名字符串
      */

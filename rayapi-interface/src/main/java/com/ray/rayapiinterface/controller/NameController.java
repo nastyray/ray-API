@@ -1,9 +1,11 @@
 package com.ray.rayapiinterface.controller;
 
-import com.ray.rayapiinterface.model.User;
-import com.ray.rayapiinterface.utils.SignUtils;
-import jakarta.servlet.http.HttpServletRequest;
+
+import com.ray.rayapiclientsdk.model.User;
+import com.ray.rayapiclientsdk.utils.SignUtils;
 import org.springframework.web.bind.annotation.*;
+
+import javax.servlet.http.HttpServletRequest;
 
 /**
  * ClassName: NameController
@@ -42,7 +44,7 @@ public class NameController {
 
 
         // 2.校验权限,这里模拟一下,直接判断 accessKey 是否为"yupi",实际应该查询数据库验证权限
-        if (!accessKey.equals("yupi")){
+        if (!accessKey.equals("lilray")){
             throw new RuntimeException("无权限");
         }
 

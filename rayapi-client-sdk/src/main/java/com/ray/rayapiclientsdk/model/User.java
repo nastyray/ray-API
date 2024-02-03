@@ -1,4 +1,4 @@
-package com.ray.rayapiinterface.model;
+package com.ray.rayapiclientsdk.model;
 
 import lombok.Data;
 
