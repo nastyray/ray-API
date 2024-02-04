@@ -2,6 +2,7 @@ package com.yupi.project.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.google.gson.Gson;
 import com.ray.rayapiclientsdk.client.ApiClient;
 import com.yupi.project.annotation.AuthCheck;
 import com.yupi.project.common.*;
@@ -281,12 +282,11 @@ public class InterfaceInfoController {
     /**
      * 在线调用
      *
-     * @param idRequest
+     * @param
      * @return
      */
     @PostMapping("/invoke")
-    @AuthCheck(mustRole = "admin")
-    public BaseResponse<Boolean> offlineInterfaceInfo(@RequestBody InterfaceInfoInvokeRequest interfaceInfoInvokeRequest,
+    public BaseResponse<Object> invokeInterfaceInfo(@RequestBody InterfaceInfoInvokeRequest interfaceInfoInvokeRequest,
                                                       HttpServletRequest request) {
         if (interfaceInfoInvokeRequest == null || interfaceInfoInvokeRequest.getId() <= 0){
             throw new BusinessException(ErrorCode.PARAMS_ERROR);
@@ -300,21 +300,20 @@ public class InterfaceInfoController {
         if (oldInterfaceInfo == null) {
             throw new BusinessException(ErrorCode.NOT_FOUND_ERROR);
         }
-        //判断该接口是否可以调用
-        com.ray.rayapiclientsdk.model.User user = new com.ray.rayapiclientsdk.model.User();
-        user.setUsername("test");
-        String username = apiClient.getUsernameByPost(user);
-        if (StringUtils.isBlank(username)){
-            throw new BusinessException(ErrorCode.SYSTEM_ERROR,"接口验证失败");
+
+        if (oldInterfaceInfo.getStatus() == OFFLINE.getValue()){
+            throw new BusinessException(ErrorCode.SYSTEM_ERROR,"接口已关闭");
         }
 
+        User loginUser = userService.getLoginUser(request);
+        String accessKey = loginUser.getAccessKey();
+        String secretKey = loginUser.getSecretKey();
+        ApiClient tempApiClient = new ApiClient(accessKey,secretKey);
+        Gson gson = new Gson();
+        com.ray.rayapiclientsdk.model.User user = gson.fromJson(userRequestParams, com.ray.rayapiclientsdk.model.User.class);
+        String usernameByPost = tempApiClient.getUsernameByPost(user);
 
-        // 仅本人或管理员可修改
-        InterfaceInfo interfaceInfo = new InterfaceInfo();
-        interfaceInfo.setId(id);
-        interfaceInfo.setStatus(OFFLINE.getValue());
-        boolean result = interfaceInfoService.updateById(interfaceInfo);
-        return ResultUtils.success(result);
+        return ResultUtils.success(usernameByPost);
     }
 
 
