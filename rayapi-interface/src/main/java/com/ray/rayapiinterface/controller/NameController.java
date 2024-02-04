@@ -65,8 +65,13 @@ public class NameController {
 
         }
 
+
+
         // 如果权限校验通过，返回 "POST 用户名字是" + 用户名
-        return "POST 用户名字是" + user.getUsername();
+        String result = "POST 用户名字是" + user.getUsername();
+        //调用成功后，次数+1
+
+        return result;
 
     }
 
