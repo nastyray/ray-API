@@ -14,13 +14,14 @@ public class RayapiGatewayApplication {
     }
 
 
-    @Bean
-    public RouteLocator customRouteLocator(RouteLocatorBuilder builder) {
-        return builder.routes()
-                .route("path_route", r -> r.path("/baidu")
-                        .uri("https://www.baidu.com"))
-                .route("host_route", r -> r.path("/yupiicu")
-                        .uri("http://yupi.icu"))
-                .build();
-    }
+//    @Bean
+//    public RouteLocator customRouteLocator(RouteLocatorBuilder builder) {
+//        return builder.routes()
+//                .route("path_route", r -> r.path("/baidu")
+//                        .uri("https://www.baidu.com"))
+//                .route("host_route", r -> r.path("/yupiicu")
+//                        .uri("http://yupi.icu"))
+//                .build();
+//    }
+
 }
