@@ -1,17 +1,17 @@
 package com.yupi.project.service;
 
-import com.yupi.project.model.entity.UserInterfaceInfo;
-
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.ray.rayapicommon.model.entity.UserInterfaceInfo;
 
 /**
-* @author Lenovo
-* @description 针对表【user_interface_info(用户调用接口关系)】的数据库操作Service
-* @createDate 2024-02-04 11:01:18
-*/
+ * 用户接口信息服务
+ *
+ * @author <a href="https://github.com/liyupi">程序员鱼皮</a>
+ * @from <a href="https://yupi.icu">编程导航知识星球</a>
+ */
 public interface UserInterfaceInfoService extends IService<UserInterfaceInfo> {
 
-    //校验
+
     void validUserInterfaceInfo(UserInterfaceInfo userInterfaceInfo, boolean add);
 
     /**
@@ -20,5 +20,5 @@ public interface UserInterfaceInfoService extends IService<UserInterfaceInfo> {
      * @param userId
      * @return
      */
-    boolean invokeCount(long interfaceInfoId,long userId);
+    boolean invokeCount(long interfaceInfoId, long userId);
 }
