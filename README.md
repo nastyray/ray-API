@@ -10,29 +10,29 @@
 
 
 
-![1710304545727](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\1710304545727.png)
+https://ray-web-tlias.oss-cn-beijing.aliyuncs.com/api/%E6%9E%B6%E6%9E%84%E5%9B%BE.png
 
 ## 功能展示
 
 登录：
 
-![1710305409550](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\1710305409550.png)
+https://ray-web-tlias.oss-cn-beijing.aliyuncs.com/api/%E7%99%BB%E5%BD%95.png
 
 主页（浏览接口）：
 
-![1710306044101](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\1710306044101.png)
+https://ray-web-tlias.oss-cn-beijing.aliyuncs.com/api/%E4%B8%BB%E9%A1%B5.png
 
 接口管理：
 
-![1710306213039](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\1710306213039.png)
+https://ray-web-tlias.oss-cn-beijing.aliyuncs.com/api/%E6%8E%A5%E5%8F%A3%E7%AE%A1%E7%90%86.png
 
 在线调用：
 
-![1710310224366](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\1710310224366.png)
+https://ray-web-tlias.oss-cn-beijing.aliyuncs.com/api/%E5%9C%A8%E7%BA%BF%E8%B0%83%E7%94%A8.png
 
 使用自己开发的客户端sdk ，一行代码调用接口
 
-![1710315966913](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\1710315966913.png)
+https://ray-web-tlias.oss-cn-beijing.aliyuncs.com/api/SDK.png
 
 
 
