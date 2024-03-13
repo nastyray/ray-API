@@ -26,8 +26,7 @@
 
 在线调用：
 
-![](<
-https://ray-web-tlias.oss-cn-beijing.aliyuncs.com/api/%E5%9C%A8%E7%BA%BF%E8%B0%83%E7%94%A8.png>)
+![](https://ray-web-tlias.oss-cn-beijing.aliyuncs.com/api/%E5%9C%A8%E7%BA%BF%E8%B0%83%E7%94%A8.png)
 
 使用自己开发的客户端sdk ，一行代码调用接口
 
