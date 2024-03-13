@@ -8,31 +8,29 @@
 
 ## 系统架构
 
-
-
-https://ray-web-tlias.oss-cn-beijing.aliyuncs.com/api/%E6%9E%B6%E6%9E%84%E5%9B%BE.png
+![](<https://ray-web-tlias.oss-cn-beijing.aliyuncs.com/api/%E6%9E%B6%E6%9E%84%E5%9B%BE.png>)
 
 ## 功能展示
 
 登录：
 
-https://ray-web-tlias.oss-cn-beijing.aliyuncs.com/api/%E7%99%BB%E5%BD%95.png
+![](<https://ray-web-tlias.oss-cn-beijing.aliyuncs.com/api/%E7%99%BB%E5%BD%95.png>)
 
 主页（浏览接口）：
 
-https://ray-web-tlias.oss-cn-beijing.aliyuncs.com/api/%E4%B8%BB%E9%A1%B5.png
+![](<https://ray-web-tlias.oss-cn-beijing.aliyuncs.com/api/%E4%B8%BB%E9%A1%B5.png>)
 
 接口管理：
 
-https://ray-web-tlias.oss-cn-beijing.aliyuncs.com/api/%E6%8E%A5%E5%8F%A3%E7%AE%A1%E7%90%86.png
+![](<https://ray-web-tlias.oss-cn-beijing.aliyuncs.com/api/%E6%8E%A5%E5%8F%A3%E7%AE%A1%E7%90%86.png>)
 
 在线调用：
 
-https://ray-web-tlias.oss-cn-beijing.aliyuncs.com/api/%E5%9C%A8%E7%BA%BF%E8%B0%83%E7%94%A8.png
+![](<https://ray-web-tlias.oss-cn-beijing.aliyuncs.com/api/%E5%9C%A8%E7%BA%BF%E8%B0%83%E7%94%A8.png>)
 
 使用自己开发的客户端sdk ，一行代码调用接口
 
-https://ray-web-tlias.oss-cn-beijing.aliyuncs.com/api/SDK.png
+![](<https://ray-web-tlias.oss-cn-beijing.aliyuncs.com/api/SDK.png>)
 
 
 
